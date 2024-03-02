@@ -6,18 +6,6 @@
     box-sizing: border-box;
 }
 
-/* Layout */
-body {
-    width: 375px;
-}
-
-@media screen and (min-width: 1440px) {
-    body {
-        width: 1440px;
-    }
-}
-
-/* Colors */
 :root {
     --primary-green: hsl(75, 94%, 57%);
     --neutral-white: hsl(0, 0%, 100%);
@@ -26,16 +14,138 @@ body {
     --neutral-off-black: hsl(0, 0%, 8%);
 }
 
-/* Typography */
+/* Layout */
 body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: var(--neutral-off-black);
+    color: var(--neutral-white);
     font-family: 'Inter', sans-serif;
-    font-size: 14px;
+    font-size: .875rem;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container {
+    margin: .875rem;
+    padding: 1.75rem;
+    padding-inline: 2rem;
+    background-color: var(--neutral-dark-grey);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: .5rem;
+    width: 100%;
+}
+
+img {
+    border-radius: 360px;
+    width: 4.5rem;
+}
+
+.title {
+    font-size: 1.25rem;
+    margin-block-start: 1rem;
+}
+
+p {
+    font-size: .875rem;
+    text-align: center;
+    margin-block-end: .75rem;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+button {
+    background-color: var(--neutral-grey);
+    color: var(--neutral-white);
+    border-radius: .5rem;
+    width: 100%;
+    font-size: large;
+    padding: .75rem;
+    margin-block: .4375rem;
+    border: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: var(--primary-green);
+    color: var(--neutral-dark-grey);
+}
+
+button:active {
+    background-color: var(--primary-green);
+    color: var(--neutral-dark-grey);
+}
+
+a {
+    all: unset;
+}
+
+.subtitle {
+    font-size: .75rem;
+    margin-block-start: .375rem;
+    margin-block-end: 1.5rem;
+    color: var(--primary-green);
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
 }
 
-strong {
-    font-weight: 600;
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media all and (max-width: 375px) {
+    body {
+        font-size: .75rem;
+    }
+
+    .container {
+        padding: 1rem;
+        width: 90%;
+    }
+
+    img {
+        width: 3.5rem;
+    }
+
+    .title {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: .75rem;
+    }
+
+    button {
+        font-size: medium;
+        padding: .5rem;
+    }
+
+    footer {
+        font-size: .5rem;
+    }
 }
