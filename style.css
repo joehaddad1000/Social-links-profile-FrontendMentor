@@ -71,7 +71,7 @@ p {
     width: 100%;
 }
 
-button {
+.btns {
     background-color: var(--neutral-grey);
     color: var(--neutral-white);
     border-radius: .5rem;
@@ -83,19 +83,20 @@ button {
     transition: all 0.2s ease-in-out;
 }
 
-button:hover {
+a{
+    all: unset;
+    text-align: center;
+}
+
+.btns:hover {
     cursor: pointer;
     background-color: var(--primary-green);
     color: var(--neutral-dark-grey);
 }
 
-button:active {
+.btns:active {
     background-color: var(--primary-green);
     color: var(--neutral-dark-grey);
-}
-
-a {
-    all: unset;
 }
 
 .subtitle {
@@ -138,11 +139,6 @@ h1, h2, h3, h4, h5, h6 {
 
     p {
         font-size: .75rem;
-    }
-
-    button {
-        font-size: medium;
-        padding: .5rem;
     }
 
     footer {
